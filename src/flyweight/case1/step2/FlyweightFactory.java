@@ -7,17 +7,23 @@ public class FlyweightFactory {
 	private static Map<String, Subject> map = new HashMap<String, Subject>();
 	
 	public Subject getSubject(String key) {
+		
 		Subject subject = map.get(key);
 		
 		if(subject == null) {
+			
 			subject = new Subject(key);
+			subject.setX(5);
+			subject.setY(6);
+			
 			map.put(key, subject);
 			
 			System.out.println("새로 생성" + key);
 		}else {
+			subject.setX(7);
+			subject.setY(8);
 			System.out.println("재사용" + key);
 		}
 		return subject;
 	}
-		
 }

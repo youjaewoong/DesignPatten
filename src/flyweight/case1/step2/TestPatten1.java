@@ -11,5 +11,10 @@ public class TestPatten1 {
 		flyweight.getSubject("b");
 		flyweight.getSubject("b");
 		
+		System.out.println(flyweight.getSubject("a").getX());
+		System.out.println(flyweight.getSubject("a").getY());
+
+		System.out.println(flyweight.getSubject("b").getX());
+		System.out.println(flyweight.getSubject("b").getY());
 	}
 }
